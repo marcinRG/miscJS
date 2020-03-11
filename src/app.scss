@@ -1,0 +1,100 @@
+.stripe {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 20vh;
+  animation-duration: .25s;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  &:nth-of-type(1) {
+    height: 10vh;
+    animation-name: red;
+  }
+  &:nth-of-type(2) {
+    animation-name: orange;
+  }
+  &:nth-of-type(3) {
+    animation-name: yellow;
+  }
+  &:nth-of-type(4) {
+    animation-name: green;
+  }
+
+  &:nth-of-type(5) {
+    animation-name: blue;
+  }
+
+  &:nth-of-type(6) {
+    height: 10vh;
+    animation-name: purple;
+  }
+}
+
+@keyframes blue {
+  from
+  {
+    background-color: #30cba4;
+  }
+  to
+  {
+    background-color: #268ee4;
+  }
+}
+
+@keyframes red {
+  from
+  {
+    background-color: #ff4b0a;
+  }
+  to
+  {
+    background-color: #df4e0e;
+  }
+}
+
+@keyframes purple {
+  from
+  {
+    background-color: #9c8ec6;
+  }
+  to
+  {
+    background-color: #9b4ef2;
+  }
+}
+
+@keyframes green {
+  from
+  {
+    background-color: #e1e63b;
+  }
+  to
+  {
+    background-color: #8ce616;
+  }
+}
+@keyframes yellow {
+  from
+  {
+    background-color: #fff505;
+  }
+  to
+  {
+    background-color: #dff500;
+  }
+}
+
+@keyframes orange {
+  from
+  {
+    background-color: #f4b209;
+  }
+  to
+  {
+    background-color: #f4b209;
+  }
+}
