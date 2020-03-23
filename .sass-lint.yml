@@ -38,9 +38,6 @@ rules:
   hex-length:
     - 1
     - style: short
-  hex-notation:
-    - 1
-    - style: uppercase
   id-name-format:
     - 1
     - convention: hyphenatedlowercase

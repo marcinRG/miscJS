@@ -1,100 +1,74 @@
+*, html , body {
+  padding: 0;
+  margin: 0;
+}
+
+
+article {
+  margin: 20px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .stripe {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
-  height: 20vh;
-  animation-duration: .25s;
+  width: 700px;
+  height: 120px;
+  animation-duration: 1s;
+  background-size: 100% 400%;
   animation-direction: alternate;
   animation-fill-mode: backwards;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  animation-name: background-transition;
 
   &:nth-of-type(1) {
-    height: 10vh;
-    animation-name: red;
+    height: 60px;
+    background-image: linear-gradient(#cb1709, #e44847);
   }
+
   &:nth-of-type(2) {
-    animation-name: orange;
+    background-image: linear-gradient(#cb6415, #e4962a);
   }
+
   &:nth-of-type(3) {
-    animation-name: yellow;
+    background-image: linear-gradient(#cbcb01, #e4e066);
   }
+
   &:nth-of-type(4) {
-    animation-name: green;
+    background-image: linear-gradient(#1bcb03, #7be464);
   }
 
   &:nth-of-type(5) {
-    animation-name: blue;
+    background-image: linear-gradient(#042bcb, #3a48cb);
   }
 
   &:nth-of-type(6) {
-    height: 10vh;
-    animation-name: purple;
+    height: 60px;
+    background-image: linear-gradient(#c502c6, #ea62f2);
   }
 }
 
-@keyframes blue {
-  from
-  {
-    background-color: #30cba4;
+@keyframes background-transition {
+  from {
+    background-position: 0 0;
   }
-  to
-  {
-    background-color: #268ee4;
+
+  to {
+    background-position: 0 100%;
   }
 }
 
-@keyframes red {
-  from
-  {
-    background-color: #ff4b0a;
-  }
-  to
-  {
-    background-color: #df4e0e;
-  }
+.example-2 {
+  width: 700px;
+  height: 600px;
+  background-color: #760540;
 }
 
-@keyframes purple {
-  from
-  {
-    background-color: #9c8ec6;
-  }
-  to
-  {
-    background-color: #9b4ef2;
-  }
-}
-
-@keyframes green {
-  from
-  {
-    background-color: #e1e63b;
-  }
-  to
-  {
-    background-color: #8ce616;
-  }
-}
-@keyframes yellow {
-  from
-  {
-    background-color: #fff505;
-  }
-  to
-  {
-    background-color: #dff500;
-  }
-}
-
-@keyframes orange {
-  from
-  {
-    background-color: #f4b209;
-  }
-  to
-  {
-    background-color: #f4b209;
-  }
+.example-3 {
+  width: 700px;
+  height: 600px;
+  background-color: #C00782;
 }
