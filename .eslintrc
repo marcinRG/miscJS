@@ -18,7 +18,8 @@
     "handle-callback-err": "off",
     "no-new": "off",
     "no-unused-vars": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "no-sparse-arrays": "off"
   },
   "env": {
     "browser": true,

@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/marcinRG/miscJS#readme",
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-async-generator-functions": "^7.8.3",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/plugin-transform-regenerator": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^2.0.2",

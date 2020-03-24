@@ -8,5 +8,10 @@
         "corejs": "3.0.0"
       }
     ]
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-async-generator-functions",
+    "@babel/plugin-transform-async-to-generator",
+    "@babel/plugin-transform-regenerator"
   ]
 }
