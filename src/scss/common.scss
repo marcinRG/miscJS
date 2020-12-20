@@ -1,0 +1,27 @@
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.all {
+    background-color: antiquewhite;
+}
+
+.app {
+    display: grid;
+    margin: 0 10%;
+    background-color: rgb(186, 238, 197);
+    justify-items: center;
+}
+
+.header {
+    background-color: whitesmoke;
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+}

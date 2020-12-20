@@ -43,7 +43,7 @@ rules:
     - convention: hyphenatedlowercase
   indentation:
     - 1
-    - size: 2
+    - size: 4
   leading-zero:
     - 1
     - include: false
@@ -121,7 +121,7 @@ rules:
       per-property: {}
   quotes:
     - 1
-    - style: single
+    - style: double
   shorthand-values:
     - 1
     - allowed-shorthands:
