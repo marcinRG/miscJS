@@ -1,1 +1,71 @@
 @import "./common";
+
+.app {
+  display: grid;
+  margin: 0 10%;
+  justify-items: center;
+}
+
+.header {
+  background-color: whitesmoke;
+  justify-self: stretch;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    background-color: transparent;
+  }
+}
+
+.main {
+  display: grid;
+  justify-self: stretch;
+  grid-template-columns: 20% 80%;
+  grid-column-gap: 20px;
+}
+
+.nav {
+
+  ul {
+    list-style-type: none;
+    display: grid;
+    grid-row-gap: 15px;
+    padding: 15px 0;
+
+    li {
+      padding-left: 10px;
+    }
+
+  }
+}
+
+.footer {
+  padding: 40px 20px;
+}
+
+.welcome {
+  height: 900px;
+  width: 100%;
+  background-color: blueviolet;
+}
+
+.example-1 {
+  height: 900px;
+  width: 100%;
+  background-color: brown;
+}
+
+.example-2 {
+  height: 900px;
+  width: 100%;
+  background-color: gold;
+}
+
+.error {
+  height: 900px;
+  width: 100%;
+  background-color: cyan;
+}
+
+
+

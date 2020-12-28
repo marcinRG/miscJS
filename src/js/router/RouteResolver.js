@@ -7,7 +7,7 @@ export class RouteResolver {
     }
 
     isPathValid(path) {
-        if (path) {
+        if (path && !path.includes('//')) {
             return this.regEx.test(path);
         }
         return false;
@@ -20,24 +20,19 @@ export class RouteResolver {
         return false;
     }
 
-    getDefaultRoute() {
-        return this.defaultRoute;
-    }
-
-    getErrorRoute() {
-        return this.errorRoute;
-    }
-
     getRouteAndParameters(path) {
-        let route = this.defaultRoute;
+        let route = this.errorRoute;
         let params = {};
         if (this.isPathValid(path)) {
-            const paramsArray = getRouteAndParametersArray(path);
-            route = getRoute(paramsArray);
-            params = getParameters(paramsArray);
+            route = this.defaultRoute;
+            if (path !== '/') {
+                const paramsArray = getRouteAndParametersArray(path);
+                route = getRoute(paramsArray);
+                params = getParameters(paramsArray);
+            }
         }
         return {
-            route: route,
+            route,
             parameters: params
         };
     }
@@ -56,7 +51,7 @@ function removeFirstAndLastSlash(str) {
 }
 
 function getRouteAndParametersArray(str) {
-    var paramsArray = [];
+    let paramsArray = [];
     str = removeFirstAndLastSlash(str);
     if (str && str.length > 0) {
         paramsArray = str.split('/');
