@@ -1,0 +1,86 @@
+@import "./mixins";
+
+.svg-1 {
+  border: 1px dashed blue;
+  display: block;
+  margin: 50px auto;
+  width: 700px;
+  height: 700px;
+
+  .background {
+    fill: #e12fbd;
+  }
+
+  .img-wrapper {
+    transform: translateX(275px) translateY(240px);
+  }
+
+  .img-face-1 {
+    width: 400px;
+    height: 400px;
+    transform-origin: 200px 450px;
+    @include animation-mixin(face-rotate, .45s, ease-in-out);
+  }
+
+  .star {
+    fill: #6dcbb7;
+
+    .star-path {
+      @include animation-mixin(star-rotate, .3s);
+      position: absolute;
+      transform-origin: 90px 90px;
+    }
+
+    &.s1 {
+      transform: translateX(50px) translateY(30px) scale(.7);
+      position: relative;
+    }
+
+    &.s2 {
+      transform: translateX(200px) translateY(150px) scale(.45);
+    }
+
+    &.s3 {
+      transform: translateX(30px) translateY(300px) scale(.45);
+    }
+
+    &.s4 {
+      transform: translateX(120px) translateY(360px) scale(.7);
+    }
+
+    &.s5 {
+      transform: translateX(730px) translateY(30px) scale(.7);
+    }
+
+    &.s6 {
+      transform: translateX(810px) translateY(170px) scale(.4);
+    }
+
+    &.s7 {
+      transform: translateX(730px) translateY(250px) scale(.4);
+    }
+
+  }
+}
+
+@keyframes star-rotate {
+
+  0% {
+    transform: rotateZ(-45deg);
+  }
+
+  100% {
+    transform: rotateZ(45deg);
+  }
+}
+
+@keyframes face-rotate {
+
+  0% {
+    transform: rotateZ(-15deg);
+  }
+
+  100% {
+    transform: rotateZ(15deg);
+  }
+}

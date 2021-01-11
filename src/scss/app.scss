@@ -1,4 +1,5 @@
 @import "./common";
+@import "./example-1";
 
 .app {
   display: grid;
@@ -7,12 +8,16 @@
 }
 
 .header {
-  background-color: whitesmoke;
+  background-color: #ab47bc;
+  color: white;
   justify-self: stretch;
+  text-align: center;
 
   h1 {
+    padding: 40px;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 35px;
+    font-weight: lighter;
     background-color: transparent;
   }
 }
@@ -20,11 +25,12 @@
 .main {
   display: grid;
   justify-self: stretch;
-  grid-template-columns: 20% 80%;
-  grid-column-gap: 20px;
+  grid-template-columns: 1fr 4fr;
+  min-height: 900px;
 }
 
 .nav {
+  background-color: #f5f5f6;
 
   ul {
     list-style-type: none;
@@ -34,37 +40,77 @@
 
     li {
       padding-left: 10px;
+      display: grid;
+      grid-template-columns: 40px auto;
+      grid-column-gap: 10px;
+      align-items: center;
+
+      &::before {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        content: "+";
+        font-size: 25px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-color: #ffeb3b;
+      }
+
+      a {
+        color: black;
+        font-weight: bolder;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+      }
+
     }
 
   }
 }
 
+.content {
+  display: grid;
+  justify-self: stretch;
+  background-color: #e1e2e1;
+}
+
 .footer {
+  justify-self: stretch;
   padding: 40px 20px;
+  background-color: #790e8b;
+  color: white;
 }
 
 .welcome {
+  display: none;
   height: 900px;
-  width: 100%;
-  background-color: blueviolet;
+  //background-color: blueviolet;
 }
 
 .example-1 {
+  //display: none;
   height: 900px;
-  width: 100%;
-  background-color: brown;
+  //text-align: center;
+  //background-color: brown;
 }
 
+
+
 .example-2 {
+  display: none;
   height: 900px;
-  width: 100%;
-  background-color: gold;
+  //background-color: gold;
 }
 
 .error {
+  display: none;
   height: 900px;
-  width: 100%;
-  background-color: cyan;
+  //background-color: cyan;
 }
 
 
