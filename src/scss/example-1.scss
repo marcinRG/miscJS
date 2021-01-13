@@ -6,20 +6,101 @@
   margin: 50px auto;
   width: 700px;
   height: 700px;
+  background-image: linear-gradient(to right, #e12fbd 0%, #e12fbd 50%, #ec2722 50%);
+  //@include animation-mixin(background-color-change, 5s);
+  animation-name: background-color-change;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+
+  background-size: 200% 100%;
+
 
   .background {
-    fill: #e12fbd;
+    fill: transparent;
+    //@include animation-mixin(background-color-change, 20s);
+    //fill: linear-gradient(271deg, #6ce4c5, #e4a26c);
   }
 
   .img-wrapper {
     transform: translateX(275px) translateY(240px);
   }
 
+  .letter-move {
+    //@include animation-mixin(letter-move, 5s);
+    animation-name: letter-move;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+
+    &.delay-05 {
+      animation-delay: .5s;
+    }
+
+    &.delay-10 {
+      animation-delay: 1s;
+    }
+
+    &.delay-15 {
+      animation-delay: 1.5s;
+    }
+
+    &.delay-20 {
+      animation-delay: 2s;
+    }
+
+    &.delay-25 {
+      animation-delay: 2.5s;
+    }
+
+    &.delay-30 {
+      animation-delay: 3s;
+    }
+  }
+
+  .letter-j {
+    //transform: translateX(0px) translateY(0px);
+  }
+
+  .letter-u {
+    transform: translateX(150px) translateY(50px);
+  }
+
+  .letter-n {
+    transform: translateX(250px) translateY(50px);
+  }
+
+  .letter-i {
+    transform: translateX(340px) translateY(50px);
+  }
+
+  .letter-o {
+    transform: translateX(400px) translateY(50px);
+  }
+
+  .letter-r {
+    transform: translateX(500px) translateY(50px);
+  }
+
+  .wave {
+    transform: translateX(100px) translateY(120px);
+    fill: #ffeb3b;
+  }
+
+
+  .letters {
+    fill: transparent;
+    transform: translateX(110px) translateY(630px);
+  }
+
   .img-face-1 {
+    @include animation-mixin(face-rotate, .45s, ease-in-out);
     width: 400px;
     height: 400px;
     transform-origin: 200px 450px;
-    @include animation-mixin(face-rotate, .45s, ease-in-out);
   }
 
   .star {
@@ -63,6 +144,24 @@
   }
 }
 
+@keyframes background-color-change {
+  0% {
+    background-position: 0 0;
+  }
+  49.99% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  99.99% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 @keyframes star-rotate {
 
   0% {
@@ -82,5 +181,23 @@
 
   100% {
     transform: rotateZ(15deg);
+  }
+}
+
+
+@keyframes letter-move {
+
+  0% {
+    fill: rgba(255, 235, 59, 0);
+    transform: translateX(-200px);
+  }
+
+  80% {
+    fill: rgba(255, 235, 59, .3);
+  }
+
+  100% {
+    fill: rgba(255, 235, 59, 1);
+    transform: translateX(0px);
   }
 }
