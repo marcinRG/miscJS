@@ -1,5 +1,6 @@
 @import "./common";
 @import "./example-1";
+@import "./example-2";
 
 .app {
   display: grid;
@@ -102,7 +103,6 @@
 
 
 .example-2 {
-  display: none;
   height: 900px;
   //background-color: gold;
 }
