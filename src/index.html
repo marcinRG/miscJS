@@ -216,6 +216,24 @@
                     <g class="g-test">
                         <rect class="rect-1"></rect>
                     </g>
+                    <g class="smil-test">
+                        <rect class="rect-2">
+                            <animate attributeName="width" from="100px" to="200px" dur="3s" begin="0s"
+                                     repeatCount="1" fill="freeze"/>
+                            <animate attributeName="height" from="100px" to="200px" dur="3s" begin="0s"
+                                     repeatCount="1" fill="freeze"/>
+                        </rect>
+                    </g>
+                    <circle id="my-circle" r="30" cx="50" cy="50" fill="orange" />
+
+                    <animate
+                            xlink:href="#my-circle"
+                            attributeName="cx"
+                            from="50"
+                            to="450"
+                            dur="1s"
+                            begin="click"
+                            fill="freeze" />
                 </svg>
             </div>
             <div class="error">

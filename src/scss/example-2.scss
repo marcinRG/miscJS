@@ -19,31 +19,42 @@
     width: 100px;
     height: 100px;
     animation-name: bounce-x-axis;
-    animation-duration: .5s;
+    animation-duration: .3s;
     animation-timing-function: linear;
     animation-direction: alternate;
     animation-iteration-count: infinite;
   }
+
+  .rect-2 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .smil-test {
+    fill: yellow;
+    transform: translateY(200px) translateY(200px);
+  }
+
 }
 
 @keyframes bounce {
 
   0% {
-    transform: translateY(350px) translateX(400px);
+    transform: translateY(250px) translateX(400px);
   }
 
   100% {
-    transform: translateY(450px) translateX(400px);
+    transform: translateY(550px) translateX(400px);
   }
 }
 
 @keyframes bounce-x-axis {
 
   0% {
-    transform: translateX(50px);
+    transform: translateX(100px);
   }
 
   100% {
-    transform: translateX(-50px);
+    transform: translateX(-100px);
   }
 }
