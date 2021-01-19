@@ -48,38 +48,38 @@
   }
 
 
-  .box-clip-x2 {
-    fill: magenta;
-    animation-delay: 1s;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-    animation-direction: normal;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-name: resize-x-axis;
-  }
+  //.box-clip-x2 {
+  //  fill: magenta;
+  //  animation-delay: 1s;
+  //  animation-duration: 2s;
+  //  animation-timing-function: ease-out;
+  //  animation-direction: normal;
+  //  animation-iteration-count: 1;
+  //  animation-fill-mode: forwards;
+  //  animation-name: resize-x-axis;
+  //}
 
 }
-@keyframes resize-x-axis {
-
-  0% {
-    height: 700px;
-    width: 0;
-    transform: rotateZ(0) translateX(-200px);
-  }
-
-  70% {
-    height: 700px;
-    width: 0;
-    transform: rotateZ(0) translateX(-200px);
-  }
-
-  100% {
-    height: 700px;
-    width: 710px;
-    transform: rotateZ(-20deg) translateX(-200px);
-  }
-}
+//@keyframes resize-x-axis {
+//
+//  0% {
+//    height: 700px;
+//    width: 0;
+//    transform: rotateZ(0) translateX(-200px);
+//  }
+//
+//  70% {
+//    height: 700px;
+//    width: 0;
+//    transform: rotateZ(0) translateX(-200px);
+//  }
+//
+//  100% {
+//    height: 700px;
+//    width: 710px;
+//    transform: rotateZ(-20deg) translateX(-200px);
+//  }
+//}
 
 
 @keyframes bounce {
