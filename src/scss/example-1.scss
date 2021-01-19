@@ -6,13 +6,141 @@
   width: 700px;
   height: 700px;
   overflow: hidden;
-  background-image: linear-gradient(to right, #e12fbd 0%, #e12fbd 50%, #ec2722 50%);
-  animation-name: background-color-change;
-  animation-duration: 12s;
-  animation-timing-function: linear;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
-  background-size: 200% 100%;
+  background-color: green;
+
+  .defs {
+    height: 0;
+    width: 0;
+    display: none;
+    visibility: hidden;
+  }
+
+  &.junior {
+    background-color: #e12fbd;
+
+    .box-clip-rect {
+      animation-name: resize-x-axis;
+    }
+
+    .stars-container {
+      display: block;
+    }
+
+    .waves {
+      display: block;
+    }
+
+    .junior-container {
+      display: block;
+    }
+
+    .back-ground-3 {
+      .letter-move {
+        animation-name: letter-move-bg3;
+      }
+    }
+
+    .back-ground-2 {
+      .letter-move {
+        animation-name: letter-move-bg2;
+      }
+    }
+
+    .back-ground-1 {
+      .letter-move {
+        animation-name: letter-move-bg1;
+      }
+    }
+
+    .letter-move {
+      animation-name: letter-move;
+    }
+
+    .wave {
+
+      &.w1 {
+        clip-path: url("#box-clip-j");
+      }
+
+      &.w2 {
+        clip-path: url("#box-clip-2-j");
+      }
+
+      &.w3 {
+        clip-path: url("#box-clip-3-j");
+      }
+
+      &.w4 {
+        clip-path: url("#box-clip-4-j");
+      }
+
+    }
+
+  }
+
+  &.senior {
+    background-color: #ec2722;
+
+    .box-clip-rect {
+      animation-name: resize-x-axis;
+    }
+
+    .stars-container {
+      display: block;
+    }
+
+    .waves {
+      display: block;
+    }
+
+    .senior-container {
+      display: block;
+    }
+
+    .back-ground-3 {
+      .letter-move {
+        animation-name: letter-move-bg3;
+      }
+    }
+
+    .back-ground-2 {
+      .letter-move {
+        animation-name: letter-move-bg2;
+      }
+    }
+
+    .back-ground-1 {
+      .letter-move {
+        animation-name: letter-move-bg1;
+      }
+    }
+
+
+    .letter-move {
+      animation-name: letter-move;
+    }
+
+    .wave {
+
+      &.w1 {
+        clip-path: url("#box-clip-s");
+      }
+
+      &.w2 {
+        clip-path: url("#box-clip-2-s");
+      }
+
+      &.w3 {
+        clip-path: url("#box-clip-3-s");
+      }
+
+      &.w4 {
+        clip-path: url("#box-clip-4-s");
+      }
+
+    }
+
+  }
 
 
   .img-wrapper {
@@ -40,28 +168,25 @@
   }
 
   .waves {
+    display: none;
     transform: translateX(210px) translateY(750px);
   }
 
   .wave {
 
     &.w1 {
-      clip-path: url("#box-clip");
       fill: rgba(152, 51, 26, 1);
     }
 
     &.w2 {
-      clip-path: url("#box-clip-2");
       fill: rgba(194, 85, 22, 1);
     }
 
     &.w3 {
-      clip-path: url("#box-clip-3");
       fill: rgba(239, 138, 13, 1);
     }
 
     &.w4 {
-      clip-path: url("#box-clip-4");
       fill: rgba(255, 235, 59, 1);
     }
 
@@ -71,9 +196,10 @@
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-direction: normal;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    animation-name: resize-x-axis;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-name: none;
+    //animation-name: resize-x-axis;
 
     &.delay-015 {
       animation-delay: 250ms;
@@ -145,7 +271,7 @@
 
   &.back-ground-3 {
     .letter-move {
-      animation-name: letter-move-bg3;
+      animation-name: none;
 
       &.delay-05 {
         animation-delay: .25s;
@@ -176,7 +302,7 @@
 
   &.back-ground-2 {
     .letter-move {
-      animation-name: letter-move-bg2;
+      animation-name: none;
 
       &.delay-05 {
         animation-delay: .35s;
@@ -206,7 +332,8 @@
 
   &.back-ground-1 {
     .letter-move {
-      animation-name: letter-move-bg1;
+      animation-name: none;
+
 
       &.delay-05 {
         animation-delay: .45s;
@@ -235,12 +362,12 @@
   }
 
   .letter-move {
-    animation-name: letter-move;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
+    animation-name: none;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
     animation-timing-function: ease-out;
     animation-direction: normal;
-    animation-fill-mode: none;
+    animation-fill-mode: forwards;
 
     &.delay-05 {
       animation-delay: .55s;
@@ -270,64 +397,17 @@
 }
 
 .junior-container {
-  display: block;
-  //animation-name: change-display;
-  //animation-duration: 12s;
-  //animation-timing-function: linear;
-  //animation-direction: normal;
-  //animation-iteration-count: infinite;
+  display: none;
 }
 
 .senior-container {
   display: none;
-  animation-name: change-display;
-  animation-duration: 12s;
-  animation-timing-function: linear;
-  animation-direction: reverse;
-  animation-iteration-count: infinite;
 }
 
-@keyframes change-display {
-  0% {
-    opacity: 1;
-  }
-
-  49.99% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-  }
-
+.stars-container {
+  display: none;
 }
 
-
-@keyframes background-color-change {
-  0% {
-    background-position: 0 0;
-  }
-
-  49.99% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 100% 0;
-  }
-
-  99.99% {
-    background-position: 100% 0;
-  }
-
-  100% {
-    background-position: 0 0;
-  }
-}
 
 @keyframes star-rotate {
 
@@ -352,6 +432,7 @@
 }
 
 @keyframes face-rotate-2 {
+
   0% {
     transform: rotateX(-30deg);
   }
@@ -369,26 +450,12 @@
     transform: translateX(-300px);
   }
 
-  1% {
+  20% {
     fill: rgba(255, 235, 59, .3);
-    transform: translateX(0);
   }
 
-  5% {
-    fill: rgba(255, 235, 59, 1);
-    transform: translateX(0);
-  }
-  50% {
-    fill: rgba(255, 235, 59, 1);
-    transform: translateX(0);
-  }
-  50.000001% {
-    fill: rgba(255, 235, 59, 0);
-    transform: translateX(-300px);
-  }
   100% {
-    fill: rgba(255, 235, 59, 0);
-    transform: translateX(-300px);
+    fill: rgba(255, 235, 59, 1);
   }
 }
 
@@ -399,42 +466,13 @@
     transform: translateX(-300px);
   }
 
-  1% {
+  20% {
     fill: rgba(239, 138, 13, .3);
-    transform: translateX(0);
   }
 
-  5% {
-    fill: rgba(239, 138, 13, 1);
-    transform: translateX(0);
-  }
-  50% {
-    fill: rgba(239, 138, 13, 1);
-    transform: translateX(0);
-  }
-  50.000001% {
-    fill: rgba(239, 138, 13, 0);
-    transform: translateX(-300px);
-  }
   100% {
-    fill: rgba(239, 138, 13, 0);
-    transform: translateX(-300px);
+    fill: rgba(239, 138, 13, 1);
   }
-
-
-
-  //0% {
-  //  fill: rgba(239, 138, 13, 0);
-  //  transform: translateX(-300px);
-  //}
-  //
-  //20% {
-  //  fill: rgba(239, 138, 13, .3);
-  //}
-  //
-  //100% {
-  //  fill: rgba(239, 138, 13, 1);
-  //}
 }
 
 @keyframes letter-move-bg2 {
