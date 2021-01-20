@@ -54,7 +54,7 @@ export class Router {
             this.handleError(reqParams);
         }
         if (index >= 0) {
-            this.routeAndParams[index].handler(reqParams.parameters);
+            this.routeAndParams[index].handler(reqParams);
         }
     }
 

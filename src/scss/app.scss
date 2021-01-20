@@ -1,11 +1,19 @@
 @import "./common";
 @import "./example-1";
 @import "./example-2";
+@import "./example-3";
 
 .app {
   display: grid;
   margin: 0 10%;
   justify-items: center;
+}
+
+.defs {
+  height: 0;
+  width: 0;
+  display: none;
+  visibility: hidden;
 }
 
 .header {
@@ -87,31 +95,10 @@
   color: white;
 }
 
-.welcome {
-  display: none;
-  height: 900px;
-  //background-color: blueviolet;
+.page {
+  min-height: 900px;
+
+  &.hide {
+    display: none;
+  }
 }
-
-.example-1 {
-  //display: none;
-  height: 900px;
-  //text-align: center;
-  //background-color: brown;
-}
-
-
-
-.example-2 {
-  height: 900px;
-  //background-color: gold;
-}
-
-.error {
-  display: none;
-  height: 900px;
-  //background-color: cyan;
-}
-
-
-

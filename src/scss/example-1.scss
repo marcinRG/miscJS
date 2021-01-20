@@ -8,18 +8,16 @@
   overflow: hidden;
   background-color: green;
 
-  .defs {
-    height: 0;
-    width: 0;
-    display: none;
-    visibility: hidden;
-  }
+  &.junior,
+  &.senior {
 
-  &.junior {
-    background-color: #e12fbd;
+    .title-container {
+      display: none;
+    }
 
-    .box-clip-rect {
-      animation-name: resize-x-axis;
+
+    .letters {
+      display: block;
     }
 
     .stars-container {
@@ -27,6 +25,39 @@
     }
 
     .waves {
+      display: block;
+    }
+  }
+
+  &.senior {
+    background-color: #ec2722;
+
+    .letter-s,
+    .letter-e {
+      display: block;
+    }
+
+    .letter-j,
+    .letter-u {
+      display: none;
+    }
+
+    .senior-container {
+      display: block;
+    }
+
+  }
+
+  &.junior {
+    background-color: #e12fbd;
+
+    .letter-s,
+    .letter-e {
+      display: none;
+    }
+
+    .letter-j,
+    .letter-u {
       display: block;
     }
 
@@ -34,114 +65,7 @@
       display: block;
     }
 
-    .back-ground-3 {
-      .letter-move {
-        animation-name: letter-move-bg3;
-      }
-    }
-
-    .back-ground-2 {
-      .letter-move {
-        animation-name: letter-move-bg2;
-      }
-    }
-
-    .back-ground-1 {
-      .letter-move {
-        animation-name: letter-move-bg1;
-      }
-    }
-
-    .letter-move {
-      animation-name: letter-move;
-    }
-
-    .wave {
-
-      &.w1 {
-        clip-path: url("#box-clip-j");
-      }
-
-      &.w2 {
-        clip-path: url("#box-clip-2-j");
-      }
-
-      &.w3 {
-        clip-path: url("#box-clip-3-j");
-      }
-
-      &.w4 {
-        clip-path: url("#box-clip-4-j");
-      }
-
-    }
-
   }
-
-  &.senior {
-    background-color: #ec2722;
-
-    .box-clip-rect {
-      animation-name: resize-x-axis;
-    }
-
-    .stars-container {
-      display: block;
-    }
-
-    .waves {
-      display: block;
-    }
-
-    .senior-container {
-      display: block;
-    }
-
-    .back-ground-3 {
-      .letter-move {
-        animation-name: letter-move-bg3;
-      }
-    }
-
-    .back-ground-2 {
-      .letter-move {
-        animation-name: letter-move-bg2;
-      }
-    }
-
-    .back-ground-1 {
-      .letter-move {
-        animation-name: letter-move-bg1;
-      }
-    }
-
-
-    .letter-move {
-      animation-name: letter-move;
-    }
-
-    .wave {
-
-      &.w1 {
-        clip-path: url("#box-clip-s");
-      }
-
-      &.w2 {
-        clip-path: url("#box-clip-2-s");
-      }
-
-      &.w3 {
-        clip-path: url("#box-clip-3-s");
-      }
-
-      &.w4 {
-        clip-path: url("#box-clip-4-s");
-      }
-
-    }
-
-  }
-
 
   .img-wrapper {
     transform: translateX(190px) translateY(110px);
@@ -176,18 +100,22 @@
 
     &.w1 {
       fill: rgba(152, 51, 26, 1);
+      clip-path: url("#box-clip");
     }
 
     &.w2 {
       fill: rgba(194, 85, 22, 1);
+      clip-path: url("#box-clip-2");
     }
 
     &.w3 {
       fill: rgba(239, 138, 13, 1);
+      clip-path: url("#box-clip-3");
     }
 
     &.w4 {
       fill: rgba(255, 235, 59, 1);
+      clip-path: url("#box-clip-4");
     }
 
   }
@@ -198,8 +126,7 @@
     animation-direction: normal;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    animation-name: none;
-    //animation-name: resize-x-axis;
+    animation-name: resize-x-axis;
 
     &.delay-015 {
       animation-delay: 250ms;
@@ -266,12 +193,22 @@
 }
 
 .letters {
+  display: none;
   fill: transparent;
   transform: translateX(110px) translateY(630px);
 
+  .letter-s {
+    transform: translateX(20px) translateY(-30px);
+  }
+
+
+  .letter-e {
+    transform: translateX(160px) translateY(50px);
+  }
+
   &.back-ground-3 {
     .letter-move {
-      animation-name: none;
+      animation-name: letter-move-bg3;
 
       &.delay-05 {
         animation-delay: .25s;
@@ -302,7 +239,7 @@
 
   &.back-ground-2 {
     .letter-move {
-      animation-name: none;
+      animation-name: letter-move-bg2;
 
       &.delay-05 {
         animation-delay: .35s;
@@ -332,7 +269,7 @@
 
   &.back-ground-1 {
     .letter-move {
-      animation-name: none;
+      animation-name: letter-move-bg1;
 
 
       &.delay-05 {
@@ -362,7 +299,7 @@
   }
 
   .letter-move {
-    animation-name: none;
+    animation-name: letter-move;
     animation-duration: .5s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
@@ -406,6 +343,38 @@
 
 .stars-container {
   display: none;
+}
+
+.title-container {
+
+  .text {
+    font-size: 75px;
+    fill: darkviolet;
+    text-transform: uppercase;
+    transform: translateX(194px) translateY(550px);
+    font-family: "vt323", monospace;
+  }
+
+  .rect-title {
+    transform: translateX(100px) translateY(450px);
+    width: 700px;
+    height: 150px;
+    fill: goldenrod;
+    border-radius: 10px;
+    border: 10px solid black;
+    stroke-width: 4px;
+    stroke: black;
+  }
+
+  .title-junior {
+    transform-origin: 250px 250px;
+    transform: translateX(460px) translateY(-50px) scale(.6) rotateZ(30deg);
+  }
+
+  .title-senior {
+    transform-origin: 250px 250px;
+    transform: translateX(-50px) translateY(-50px) scale(.6) rotateZ(-30deg);
+  }
 }
 
 

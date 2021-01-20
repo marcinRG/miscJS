@@ -14,6 +14,8 @@ export class SvgExample {
 
     close() {
         window.clearInterval(this.intervalId);
+        this.svg1.classList.remove('senior');
+        this.svg1.classList.remove('junior');
         console.log('close');
     }
 
@@ -25,22 +27,31 @@ export class SvgExample {
             changeClassToSenior(this.svg1);
             this.showJunior = true;
         }
+        resetAnimationWavesAndLetters(this.svg1);
     }
 
 }
 
+function resetAnimationsOnElement(element,selector) {
+    const elemToReset = element.querySelector(selector);
+    const copyOfElem = elemToReset.cloneNode(true);
+    elemToReset.parentNode.replaceChild(copyOfElem,elemToReset);
+}
+
+function resetAnimationWavesAndLetters(element) {
+    resetAnimationsOnElement(element,'.waves');
+    resetAnimationsOnElement(element,'.letter-container');
+}
+
+
 function changeClassToJunior(element) {
     element.classList.remove('senior');
     element.classList.add('junior');
-    element.getBoundingClientRect();
-    element.offsetWidth;
 }
 
 function changeClassToSenior(element) {
     element.classList.remove('junior');
     element.classList.add('senior');
-    element.getBoundingClientRect();
-    element.offsetWidth;
 }
 
 const svgExample = new SvgExample();
