@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 180 133" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="Artboard1" x="0" y="0" width="179.746" height="132.441" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="Artboard11" serif:id="Artboard1" x="0" y="0" width="179.746" height="132.441"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <g id="face">
+            <path id="background" d="M124.077,110.179l-73.412,-0l-0,-9.931l-19.646,-0l0,-19.861l-11.373,-0l-0,-28.799l-10.34,-0l-0,-11.917l-9.306,0l0,-29.792l9.306,0l-0,-9.93l32.053,-0l0,9.93l20.68,0l-0,-9.93l62.038,-0l0,9.93l9.306,0l0,-9.93l32.054,-0l-0,9.93l10.339,0l0,29.792l-10.339,0l-0,9.931l-11.374,-0l-0,30.785l-9.306,-0l0,19.861l-20.68,-0l0,9.931Z" style="fill:rgb(255,82,130);"/>
+            <path id="ear-2" d="M41.155,10.334l0,11.613l-10.333,-0l0,8.71l-10.334,-0l0,9.677l-10.333,-0l0,-30l31,-0Z" style="fill:rgb(255,198,183);"/>
+            <path id="ear-1" d="M133.621,9.949l0,11.613l10.333,-0l0,8.71l10.334,-0l0,9.677l10.333,-0l0,-30l-31,-0Z" style="fill:rgb(255,195,169);"/>
+            <rect id="eye-2" x="40.925" y="39.949" width="10" height="21" style="fill:rgb(10,18,22);"/>
+            <rect id="eye-1" x="120.925" y="39.949" width="10" height="21" style="fill:rgb(12,8,13);"/>
+            <rect id="mouth" x="50.925" y="69.949" width="70" height="11" style="fill:rgb(114,77,79);"/>
+        </g>
+        <g id="twarz">
+            <path d="M152.344,92.025l-13.427,-0l0,13.134l-12.704,-0l-0,14.158l-23.527,-0l-0,11.841l-38.584,0l0,-11.841l-22.115,-0l0,-14.158l-11.057,-0l-0,-13.134l-12.217,-0l-0,-74.522l133.631,0l0,74.522Z" style="fill:rgb(255,82,130);"/>
+        </g>
+        <g id="usta">
+            <path d="M42.328,84.868l-10.194,-0l-0,-19.289l111.509,0l-0,19.289l-11.204,-0l-0,10.059l-10.602,0l0,10.845l-19.632,-0l0,9.069l-32.196,0l0,-9.069l-18.454,-0l0,-10.845l-9.227,0l0,-10.059Z" style="fill:rgb(255,193,183);"/>
+        </g>
+        <g id="usta-maska" serif:id="usta maska">
+            <path d="M32.401,75.104l-0,-9.525l111.242,0l-0,19.36l-9.718,-0l-0,9.579l-11.099,0l0,11.199l-70.389,-0l0,-11.199l-9.091,0l0,-9.579l-10.945,-0l-0,-0.174l-0.023,-0l-0,-9.661l0.023,-0Z" style="fill:rgb(10,18,22);"/>
+        </g>
+        <g id="morda-szeroka">
+            <path id="background1" serif:id="background" d="M19.708,80.438l-0.062,-0l-0,-28.799l-10.34,0l-0,-11.917l-9.306,0l0,-29.791l9.306,-0l-0,-9.931l32.053,0l0,9.931l20.68,-0l-0,-9.931l62.038,0l0,9.931l9.306,-0l0,-9.931l32.054,0l-0,9.931l10.339,-0l0,29.791l-10.339,0l-0,9.931l-11.374,0l-0,30.785l-0.014,-0l0,9.915l-9.292,0l0,9.946l-0.175,0l-0,11.085l-10.399,-0l0,8.66l-11.141,-0l-0,11.114l-72.287,0l-0,-11.114l-10.388,-0l-0,-8.66l-11.795,-0l-0,-21.031l-8.864,0l-0,-9.915Z" style="fill:rgb(255,82,130);"/>
+        </g>
+    </g>
+</svg>
