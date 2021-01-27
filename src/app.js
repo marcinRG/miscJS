@@ -1,6 +1,7 @@
 import {RouteResolver} from './js/router/RouteResolver';
 import {appSettings} from './js/app.settings/settings';
 import './js/svg-example/svg-example';
+import './js/svg-letters/svg-letters';
 import './scss/app.scss';
 import {Router} from './js/router/Router';
 
